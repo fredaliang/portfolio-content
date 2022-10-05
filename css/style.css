@@ -1,44 +1,54 @@
 /*Add padding and margin to space out the page.
 Make the font larger too.*/
 body{
+	font-family: Baskerville;
 	margin:1%;
 	padding:1%;
-	font-size:150%;
 }
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
-	font-size: 1.5em;
+	font-size: 36px;
 	font-weight: bold;
 }
 
-.active{
-	background: white;
-    text-transform: uppercase;
-	text-align: center;
-}
-
-.active a{
-	text-decoration: none;;
-}
-
-/*Style the images */
-img{
-    height: 220px;
-		width:auto;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-/*Make the h2 heading match h1*/
 h2{
-	font-size: 1.5em;
+	font-size: 28px;
 	font-weight: bold;
+}
+
+p{
+	font-size: 20px;
 }
 
 /*Improve the spacing for paragraphs AND headings*/
 p, h1, h2 {
     padding: 10px;
+}
+
+.active{
+	background-color: yellow;
+  text-transform: uppercase;
+	text-align: center;
+}
+
+/*Style the images */
+figure{
+	margin: 10px;
+}
+img{
+    width: 25%;
+		height:auto;
+		box-sizing: border-box;
+		border: 3px dotted black;
+    border-radius: 10px;
+    padding: 5px;
+		margin: 5px;
+}
+
+img:hover{
+	width: 30%;
+	transition: 0.5s;
 }
 
 /*Add borders around the main components and some
@@ -52,7 +62,7 @@ header, nav, main, footer{
 /*Change the styling for all of the list
 items in the nav section*/
 nav li{
-	background-color: #ECFF4D;
+	background-color: white;
 	padding:10px;
 	width:25%;
 	border:1px solid black;
@@ -61,8 +71,6 @@ nav li{
 }
 
 figcaption{
-	font-size: 0.75em;
+	font-size: 16px;
 	font-style: italic;
 }
-/*Added this so the links stay the same color*/
-a:visited{color:#0000FF}
