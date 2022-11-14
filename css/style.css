@@ -1,29 +1,42 @@
 /*Add padding and margin to space out the page.
 Make the font larger too.*/
 body{
-	font-family: Baskerville;
+	font-family: 'Space Mono', monospace, Baskerville;
 	margin:1%;
 	padding:1%;
+	background-image: url('../images/background.jpeg');
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 15px;
 }
+
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
-	font-size: 36px;
+	font-size: 1.8em;
 	font-weight: bold;
 }
 
 h2{
-	font-size: 28px;
+	font-size: 1.5em;
 	font-weight: bold;
 }
 
 p{
-	font-size: 20px;
+	font-size: 1.2em;
 }
 
 /*Improve the spacing for paragraphs AND headings*/
 p, h1, h2 {
     padding: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 .active{
@@ -35,9 +48,9 @@ p, h1, h2 {
 /*Style the images */
 figure{
 	margin: 10px;
+	animation: fadeIn 5s;
 }
 img{
-    width: 25%;
 		height:auto;
 		box-sizing: border-box;
 		border: 3px dotted black;
@@ -47,30 +60,72 @@ img{
 }
 
 img:hover{
-	width: 30%;
-	transition: 0.5s;
+	width: 95%;
+	transition: 1s;
 }
 
 /*Add borders around the main components and some
 space too*/
-header, nav, main, footer{
+header, nav, main, aside, footer{
 	border: 3px solid black;
-	margin: 20px 0;
+	margin: 10px 0;
+	background-color: rgba(243, 241, 239, 0.99);
+}
+
+footer{
+	text-align: center;
+	font-size: 1em;
+	padding: 5px;
+}
+
+/*Make main tag as the flex container*/
+main{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: auto;
+	justify-content: space-around;
+	text-align: center;
+}
+
+main img{
+	justify-content: center;
+	width: 80%;
+	height: auto;
 }
 
 
 /*Change the styling for all of the list
 items in the nav section*/
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 nav li{
 	background-color: white;
+	text-align: center;
+	font-size: 0.7em;
 	padding:10px;
-	width:25%;
 	border:1px solid black;
-	display: inline-block;
-	width: 20%;
+	flex-direction: column;
+
 }
 
 figcaption{
-	font-size: 16px;
+	font-size: 0.8em;
 	font-style: italic;
+}
+
+/*Animation for the images*/
+@keyframes fadeIn{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/*No animation for the images if the user prefers-reduced-motion */
+@media (prefers-reduced-motion) {
+  figure {
+    animation: fadeIn 5s;
+  }
 }

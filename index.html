@@ -2,6 +2,25 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZJ33P96YX"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'G-FZJ33P96YX');
+	</script>
+
+	<!-- Google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Regular setting -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.png">
@@ -26,6 +45,7 @@
 
 	<main id="main">
 		<h1>Welcome to My SG Food Tour</h1>
+		<i class="fa fa-car" style="font-size:48px;"></i>
     <br>
 		<h2>About Me</h2>
 		<p>
@@ -45,6 +65,22 @@
 			<figcaption>A snapshot of me trying out a place famous for its Swiss Fondue </figcaption>
 		</figure>
 	</main>
+	<aside>
+		<form action="https://formspree.io/f/mdojpygq" method="POST">
+			<p>Let's stay connected!</p>
+			<label>
+			Your email:
+			<input type="email" name="email">
+			</label>
+			<br>
+			<label>
+			Your message:
+			<textarea name="message"></textarea>
+			</label>
+			<!-- your other form fields go here -->
+			<button type="submit">Send</button>
+		</form>
+	</aside>
 
 	<footer>
 		&copy; Freda Liang | 2022
