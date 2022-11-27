@@ -9,6 +9,26 @@ body{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-row-gap: 15px;
+	line-height: 1.2;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  z-index: 1;
+  position:absolute;
+  left: -500px;
+  top: -40px;
+}
+
+.skip a:focus{
+  background: white;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  z-index: 1;
+  position: absolute;
 }
 
 
@@ -29,7 +49,7 @@ p{
 
 /*Improve the spacing for paragraphs AND headings*/
 p, h1, h2 {
-    padding: 10px;
+  padding: 10px;
 }
 
 a {
@@ -44,6 +64,7 @@ a:hover{
 	background-color: yellow;
   text-transform: uppercase;
 	text-align: center;
+	font-weight: bold;
 }
 
 /*Style the images */
@@ -71,7 +92,7 @@ header, nav, main, aside, footer{
 	border: 3px solid black;
 	margin: 10px 0;
 	background-color: black;
-	opacity: 0.9;
+	opacity: 0.95;
 }
 
 footer{
@@ -88,7 +109,10 @@ main{
 	margin: auto;
 	justify-content: space-around;
 	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
 }
+
 
 main img{
 	justify-content: center;
@@ -117,6 +141,108 @@ nav li{
 figcaption{
 	font-size: 0.8em;
 	font-style: italic;
+}
+
+aside{
+	text-align: center;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+/*tablet version*/
+@media all and (min-width: 680px){
+	/*change the grid layout for the desktop*/
+	main{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		grid-row-gap: 25px;
+		text-align: center;
+	}
+
+	.freda, .restaurant_fig, .coffee_fig{
+		grid-column: 1 / -1;
+	}
+
+	#title_restaurant, #title_coffee{
+		grid-column: 1 / -1;
+	}
+
+	header{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	nav{
+		width: 100%;
+		grid-column: 1 / -1;
+	}
+
+
+	nav ul{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+
+	/*special fixed position for aside form on tablet and mobile versions on homepage*/
+	aside{
+		position: fixed;
+		right: 0;
+		top: 50%;
+		width: 20%;
+		height: auto;
+		border: 2px dotted white;
+		padding: 5px;
+		box-sizing: border-box;
+		background-color: lightgray;
+		color: black;
+		font-size: 0.75em;
+	}
+
+
+}
+
+/*Desktop version*/
+@media all and (min-width: 960px){
+	/*change the grid layout for the desktop*/
+	main{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+		grid-row-gap: 15px;
+	}
+
+	p{
+		font-size: 1.1em;
+		text-align: left;
+	}
+
+	#title_home{
+		grid-column: 1 / span 2;
+	}
+
+	i{
+		grid-column: 3 / span 1;
+	}
+
+	.freda, .restaurant_fig, .coffee_fig{
+		grid-column: 3 / span 1;
+	}
+
+	#intro_gallery{
+		grid-column: 2 / span 2;
+	}
+
+	nav{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: flex-end;
+		grid-column: 1 / -1;
+		box-sizing: border-box;
+	}
+
 }
 
 /*Animation for the images*/
